@@ -1,0 +1,170 @@
+{
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    // 命令行模式， 进入方法是按下冒号
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+
+    ],
+    // 插入模式, 进入方法是按下i, 也可以按下其他编辑键进入
+    "vim.insertModeKeyBindingsNonRecursive": [
+        // 按下ctrl + j，将当前行向下移动
+        {
+            "before": ["<C-j>"],
+            "commands": ["editor.action.moveLinesDownAction"]
+        },
+        // 按下ctrl + k，将当前行向上移动
+        {
+            "before": ["<C-k>"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        },
+    ],
+    // 普通模式, 进入方法是按下esc
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["L"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["H"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["m", "t"],
+            "commands": ["workbench.action.terminal.new"]
+        },
+        {
+            "before": ["m", "s"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["m", "c"],
+            "commands": ["workbench.action.chat.open"]
+        },
+        {
+            "before": ["<leader>", "y"],
+            "commands": ["editor.action.clipboardCopyAction"],
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["editor.action.clipboardPasteAction"]
+        },
+        // 关闭当前标签页
+        {
+            "before": ["<leader>", "c", "t"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        // 跳转到实现处(achieve)
+        {
+            "before": ["g", "a"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        // 跳转到引用处(call)
+        {
+            "before": ["g", "c"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        // 按下enter，在当前行下方插入新行
+        {
+            "before": ["<CR>"],
+            "after": ["o", "<esc>"]
+        },
+        // 按ctrl + shift + enter，在当前行上方插入新行
+        {
+            "before": ["<S-C-CR>"],
+            "after": ["O", "<esc>"]
+        },
+        // 按下ctrl + j，将当前行向下移动
+        {
+            "before": ["<C-j>"],
+            "after": [":", "m", " ", "+", "1", "<CR>"]
+        },
+        // 按下ctrl + k，将当前行向上移动
+        {
+            "before": ["<C-k>"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        },
+
+    ],
+    // 可视模式, 进入方法是按下v
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["L"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["H"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<leader>", "y"],
+            "commands": ["editor.action.clipboardCopyAction"],
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["editor.action.clipboardPasteAction"]
+        },
+        {
+            "before": ["m", "t"],
+            "commands": ["workbench.action.terminal.new"]
+        },
+        {
+            "before": ["m", "s"],
+            "commands": ["workbench.view.explorer"]
+        },
+        // 关闭当前标签页
+        {
+            "before": ["<leader>", "c", "t"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        // 跳转到实现处(achieve)
+        {
+            "before": ["g", "a"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        // 跳转到引用处(call)
+        {
+            "before": ["g", "c"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        // 按下ctrl + j，将当前行向下移动
+        {
+            "before": ["<C-j>"],
+            "after": [":", "m", " ", "'", ">", "+", "1", "<CR>", "g", "v"]
+        },
+        // 按下ctrl + k，将当前行向上移动
+        {
+            "before": ["<C-k>"],
+            "after": [":", "m", " ", "'", "<", "-", "2", "<CR>", "g", "v"]
+        },  
+    ],
+    "workbench.colorTheme": "Vim Dark Hard",
+    "vim.leader": "<space>",
+    "Key Promoter.suggestKeybindingCreation": false,
+    "Key Promoter.ignoredCommands": [
+        "type",
+        "inlineChat.hideHint",
+        "workbench.action.Editor",
+        "deleteLeft",
+        "list.focusDown",
+        "list.focusUp",
+        "workbench.action.previousEditor",
+        "workbench.action.nextEditor"
+    ],
+    //填入本地模板文件的路径
+    "luaide.luaTemplatesDir": "E:/VSCodeLuaTemplate",
+    "luaide.macroList": [
+        {
+            "name": "author",
+            "value": "guqiulei"
+        }
+    ],
+    "editor.minimap.enabled": false,
+    "workbench.editor.wrapTabs": true,
+    "[lua]": {
+        "editor.defaultFormatter": "kangping.luaide"
+    },
+    "editor.wordWrap": "on",
+    "window.customTitleBarVisibility": "never",
+    "files.autoGuessEncoding": true,
+}
