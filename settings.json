@@ -49,11 +49,6 @@
             "before": ["<leader>", "p"],
             "commands": ["editor.action.clipboardPasteAction"]
         },
-        // 关闭当前标签页
-        {
-            "before": ["<leader>", "c", "t"],
-            "commands": ["workbench.action.closeActiveEditor"]
-        },
         // 跳转到实现处(achieve)
         {
             "before": ["g", "a"],
@@ -65,11 +60,11 @@
             "commands": ["editor.action.goToReferences"]
         },
         // 按下enter，在当前行下方插入新行
+        // 按ctrl + shift + enter，在当前行上方插入新行
         {
             "before": ["<CR>"],
             "after": ["o", "<esc>"]
         },
-        // 按ctrl + shift + enter，在当前行上方插入新行
         {
             "before": ["<S-C-CR>"],
             "after": ["O", "<esc>"]
@@ -84,7 +79,26 @@
             "before": ["<C-k>"],
             "commands": ["editor.action.moveLinesUpAction"]
         },
-
+        // 关闭当前标签页
+        {
+            "before": ["<leader>", "c", "e", "c"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        // 关闭其他标签页
+        {
+            "before": ["<leader>", "c", "e", "o"],
+            "commands": ["workbench.action.closeOtherEditors"]
+        },
+        // 关闭前面的标签页
+        {
+            "before": ["<leader>", "c", "e", "b"],
+            "commands": ["workbench.action.closeEditorsToTheLeft"]
+        },
+        // 关闭后面的标签页
+        {
+            "before": ["<leader>", "c", "e", "a"],
+            "commands": ["workbench.action.closeEditorsToTheRight"]
+        },
     ],
     // 可视模式, 进入方法是按下v
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -114,8 +128,23 @@
         },
         // 关闭当前标签页
         {
-            "before": ["<leader>", "c", "t"],
+            "before": ["<leader>", "c", "e", "c"],
             "commands": ["workbench.action.closeActiveEditor"]
+        },
+        // 关闭其他标签页
+        {
+            "before": ["<leader>", "c", "e", "o"],
+            "commands": ["workbench.action.closeOtherEditors"]
+        },
+        // 关闭前面的标签页
+        {
+            "before": ["<leader>", "c", "e", "b"],
+            "commands": ["workbench.action.closeEditorsToTheLeft"]
+        },
+        // 关闭后面的标签页
+        {
+            "before": ["<leader>", "c", "e", "a"],
+            "commands": ["workbench.action.closeEditorsToTheRight"]
         },
         // 跳转到实现处(achieve)
         {
